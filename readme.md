@@ -1,3 +1,8 @@
+![RedLotus-Logo-Dark](.github/base-logo-dark-mode.svg#gh-dark-mode-only)
+![RedLotus-Logo-Light](.github/base-logo-light-mode.svg#gh-light-mode-only)
+
+## Redlotus fork for adding CommonJS support
+
 # super-regex
 
 > Make a regular expression time out if it takes too long to execute
@@ -11,7 +16,9 @@ The timeout only works in Node.js. In the browser, it will simply not time out.
 ## Install
 
 ```sh
-npm install super-regex
+npm install @redlotus/super-regex
+
+yarn add @redlotus/super-regex
 ```
 
 ## Usage

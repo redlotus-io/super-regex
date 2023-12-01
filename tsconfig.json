@@ -1,0 +1,18 @@
+{
+  "extends": "@redlotus/typescript-config/base/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "dist",
+    "target": "ES5",
+    "module": "CommonJS",
+    "downlevelIteration": true
+  },
+  "include": [
+    "*.ts",
+    "*.d.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+  ],
+}

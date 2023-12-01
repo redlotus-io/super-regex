@@ -1,31 +1,24 @@
 {
-	"name": "super-regex",
-	"version": "0.3.0",
+	"name": "@redlotus/super-regex",
+	"version": "1.0.0",
 	"description": "Make a regular expression time out if it takes too long to execute",
 	"license": "MIT",
-	"repository": "sindresorhus/super-regex",
-	"funding": "https://github.com/sponsors/sindresorhus",
-	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "https://sindresorhus.com"
-	},
-	"type": "module",
 	"exports": {
-		"types": "./index.d.ts",
-		"default": "./index.js"
+		"./package.json": "./package.json",
+		".": "./dist/index.js"
 	},
+	"types": "dist/index.d.ts",
 	"sideEffects": false,
 	"engines": {
 		"node": ">=18"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd",
-		"benchmark": "node benchmark/index.js"
+		"build": "tsc",
+		"test": "ava && tsd"
 	},
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"dist/index.js",
+		"dist/index.d.ts"
 	],
 	"keywords": [
 		"regex",
@@ -50,6 +43,11 @@
 	"devDependencies": {
 		"ava": "^5.3.1",
 		"tsd": "^0.29.0",
-		"xo": "^0.56.0"
+		"@redlotus/typescript-config": "^1.0.0",
+		"@types/node": "^20.10.1",
+		"@types/url-regex-safe": "^1.0.2",
+		"eslint-config-redlotus-base": "^0.2.1",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.3.2"
 	}
 }
