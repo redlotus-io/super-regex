@@ -1,9 +1,7 @@
 ![RedLotus-Logo-Dark](.github/base-logo-dark-mode.svg#gh-dark-mode-only)
 ![RedLotus-Logo-Light](.github/base-logo-light-mode.svg#gh-light-mode-only)
 
-## Redlotus fork for adding CommonJS support
-
-# super-regex
+# @redlotus/super-regex
 
 > Make a regular expression time out if it takes too long to execute
 
