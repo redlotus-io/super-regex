@@ -1,6 +1,6 @@
 {
 	"name": "@redlotus/super-regex",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Make a regular expression time out if it takes too long to execute",
 	"license": "MIT",
 	"exports": {
@@ -37,17 +37,16 @@
 		"execute"
 	],
 	"dependencies": {
-		"function-timeout": "^1.0.1",
 		"time-span": "^5.1.0"
 	},
 	"devDependencies": {
-		"ava": "^5.3.1",
-		"tsd": "^0.29.0",
 		"@redlotus/typescript-config": "^1.0.0",
 		"@types/node": "^20.10.1",
 		"@types/url-regex-safe": "^1.0.2",
+		"ava": "^5.3.1",
 		"eslint-config-redlotus-base": "^0.2.1",
 		"ts-node-dev": "^2.0.0",
+		"tsd": "^0.29.0",
 		"typescript": "^5.3.2"
 	}
 }

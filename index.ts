@@ -1,7 +1,8 @@
 /* eslint-disable consistent-return */
-import functionTimeout, { isTimeoutError } from "function-timeout";
-import { type Options } from "function-timeout";
 import timeSpan from "time-span";
+
+import { functionTimeout, isTimeoutError } from "./functionTimeout";
+import { type FunctionTimeoutOptions } from "./functionTimeout";
 
 export type Match = {
   match: string;
@@ -16,7 +17,7 @@ export type MatchesOptions = {
 	The time in milliseconds to wait before timing out when searching for each match.
 	*/
   readonly matchTimeout?: number;
-} & Options;
+} & FunctionTimeoutOptions;
 
 const resultToMatch = (result: any) => ({
   match: result[0],
@@ -40,7 +41,11 @@ import {isMatch} from 'super-regex';
 console.log(isMatch(/\d+/, getUserInput(), {timeout: 1000}));
 ```
 */
-export const isMatch = (regex: RegExp, string: string, { timeout }: Options = {}): boolean => {
+export const isMatch = (
+  regex: RegExp,
+  string: string,
+  { timeout }: FunctionTimeoutOptions = {},
+): boolean => {
   try {
     return functionTimeout(() => structuredClone(regex).test(string), { timeout })();
   } catch (error) {
@@ -67,7 +72,7 @@ console.log(firstMatch(/\d+/, getUserInput(), {timeout: 1000}));
 export function firstMatch(
   regex: RegExp,
   string: string,
-  { timeout }: Options = {},
+  { timeout }: FunctionTimeoutOptions = {},
 ): Match | undefined {
   try {
     const result = functionTimeout(() => structuredClone(regex).exec(string), {
